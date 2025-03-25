@@ -1,0 +1,305 @@
+//import java.util.Scanner;
+//class Main {
+   // public static void main(String[] args) {
+       // Scanner ref=new Scanner(System.in);
+       // String str1=ref.nextline();
+       
+       // teacher="java is fun"
+        
+        //student1="java is fun"
+        
+      //  student2="java is hard"
+//}
+
+
+
+
+// public class Main {
+//     public static void main(String[] args) {
+//     String teacher = "java is fun";
+//     String student1 = "java is fun";
+//     String student2 = "java is hard";
+//     System.out.println("Teacher: " + teacher);
+// System.out.println("Student 1: " + student1);
+//  System.out.println("Student 2: " + student2);
+//     }
+// }
+
+// public class SubstringExample {
+// public static void main(String[] args) {
+// String str="Java Programming";
+// System.out.println("Substring from index5:"+str.substring(5));
+// System.out.println("Substring from index0to4:"+str.substring(0,4));
+// }
+// }
+
+// class main {
+// public static void main(String[] args){
+// String s1="Hello";
+// for(int i=s1.length()-1;i>=0;i--){
+// System.out.print(s1.charAt(i));
+// }
+// }
+// }
+
+//  public class indexofExample {
+//  public static void main(String[] args){
+//      String str="Java Programming";
+//      System.out.println("Indexof'Prog':"+str.indexOf("prog"));
+//    System.out.printIndexof'z'"+str.indexOf('z'));
+//      }
+// }
+
+// class main{
+//   public static void main(String[] args){
+//       String s1="Java Programming";
+//       System.out.println(s1.replace('a','x'));
+//   }  
+// }
+
+
+
+
+class main{
+public static void main(String[] args){
+  String s1=new String("JavaDeveloper");  
+     String s2="JavaDeveloper";
+      String s3=s1.intern();
+      System.out.println(s1==s2);
+System.out.println(s2==s3);
+}
+}
+
+ 
+
+
+// class main{
+//  public static void main(String[] args){
+//      String str1="Java";
+//      String str2="java";
+//      System.out.println("Case-Sensitive equals:"+str1.equals(str2));
+//      System.out.println("Case-Insensitive equals:"+str1.equalsIgnoreCase(str2));
+//      } 
+//  }
+
+
+// class main{
+// public static void main(String[] args){
+//  String str="Java Programming";
+//  System.out.println("Before trim:["+str+"]");
+//  System.out.println("After trim:["+str.trim()+"]");    
+//   }
+// }
+
+class main{
+public static void main(String[] args){
+  String s1=new String("JavaDeveloper");  
+     String s2="JavaDeveloper";
+      String s3=s1.intern();
+      System.out.println(s1==s2);
+System.out.println(s2==s3);
+}
+}
+
+ // class main{
+//  public static void main(String[] args){
+//  String str="Java Programming";
+//  System.out.println("Contains'Java':"+str.contains("Java"));
+//  System.out.println("Contains'Python':"+str.contains("Python"));
+//  }
+//  }
+
+ import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in); 
+        String str = "123,456,789";
+        String[] arr = str.split(",");
+        int max = 0;
+        for (int i = 0; i < arr.length; i++) { 
+            System.out.println(Integer.parseInt(arr[i]+1)); 
+    }
+    }
+}
+
+
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        String str = "123,456,789";
+        String[] arr = str.split(",");
+        int max = 0;
+        for (int i = 0; i < arr.length; i++) { 
+        //    System.out.println(Integer.parseInt(arr[i]+1)); 
+        if(Integer.parseInt(arr[i])>max)
+        {
+            max=Integer.parseInt(arr[i]);
+        }
+        System.out.println(max);        
+    }
+    }
+}
+
+
+
+import java.util.*;
+class main {
+    public static void main(String[] args) {
+        Scanner ref= new Scanner(System.in);
+        System.out.println("enter your char value");
+        char ch=ref.nextLine().charAt(0);
+        System.out.println(ch);
+         }
+}
+
+
+class main {
+public static void main(String[] args) {
+    Objectoriented ref=new Objectoriented();
+    System.out.println("Nonstatic var:"+ref.Name);
+    System.out.println("Nonstatic var:"+ref.Rollno);
+System.out.println("static var:"+Objectoriented.a);
+Objectoriented.Display();
+}
+}
+class Objectoriented{
+    String Name="java";
+    String Rollno="12CA01";
+    static int a=10;
+    public static void Display(){
+        System.out.println("static methods");
+    }
+}
+
+     
+   
+     class main {
+   public static void main(String[] args) {
+Sample ref=new Sample("ford","MUSTANG");
+Sample ref1=new Sample("toyata","supra");    
+System.out.println(ref.carname);        
+System.out.println(ref.carmodel);
+System.out.println(ref1.carname);    
+System.out.println(ref1.carmodel);        
+    }
+}
+
+class Sample{
+    String carname;
+    String carmodel;
+    Sample(String carname , String carmodel){
+        this.carname=carname;
+        this.carmodel=carmodel;
+        System.out.println("Default constructor");
+    }
+}
+   
+
+
+class main {
+public static void main(String[] args) {
+Account ac=new Account("sanju",2100);
+System.out.println("AccountHolder name:"+ac.getAccholder());
+System.out.println("Holder Balance:"+ac.getBalance());
+}
+}
+
+class Account{
+    private String Accholder;
+    private int Balance;
+    Account(String Accholder, int Balance){
+         this.Accholder=Accholder;
+         this.Balance=Balance;
+    }
+    public String getAccholder(){
+        return Accholder;
+    }
+    public int getBalance(){
+        return Balance;
+    } 
+}
+
+
+
+                                                            NO:2
+class main {
+public static void main(String[] args) {
+Account ac=new Account("Sanju",2100);
+System.out.println("AccountHoldername:"+ac.getAccholder());
+System.out.println("HolderBalance:"+ac.getBalance());
+ac.setAccholder("Dhilip");
+System.out.println("update Accholder name:"+ac.getAccholder());
+}
+}
+
+class Account{
+    private String Accholder;
+    private int Balance;
+    Account(String Accholder, int Balance){
+         this.Accholder=Accholder;
+         this.Balance=Balance;
+    }
+    public String getAccholder(){
+        return Accholder;
+    }
+    public int getBalance(){
+        return Balance;
+    } 
+    public void setAccholder(String Accholder){
+        this.Accholder=Accholder;
+    }
+}
+                                            NO 3
+class Main {
+    public static void main(String[] args) {
+        Account ac = new Account("Sanju", 210000);
+        System.out.println("Account Holder Name: " + ac.getAccholder());
+        System.out.println("Holder Balance: " + ac.getBalance());
+            ac.creditAmount(70000);
+            ac.withdrawAmount(400000);
+        ac.setBalance(10000);
+        ac.setAccholder("Dhilip");
+        System.out.println("Update Account Holder Name: " + ac.getAccholder());
+        System.out.println("Update Holder Balance: " + ac.getBalance());
+    }
+}
+
+class Account {
+    private String Accholder;
+    private int Balance;
+
+    Account(String Accholder, int Balance) {
+        this.Accholder = Accholder;
+        this.Balance = Balance;
+    }
+
+    public String getAccholder() {
+        return Accholder;
+    }
+    public int getBalance() {
+        return Balance;
+    }
+    public void setAccholder(String Accholder) {
+        this.Accholder = Accholder;
+    }
+    public void setBalance(int amount){
+        if(Balance>0){
+            Balance+=amount;
+            System.out.println("deposit successfully total balance:"+Balance);
+        }
+    }
+    public void creditAmount(int amount) {
+        this.Balance += amount;
+        System.out.println("Amount credited: " + amount);
+        System.out.println("Update Balance: " + this.Balance);
+    }
+    public void withdrawAmount(int Amount){
+        this.Balance -=Amount;
+        System.out.println("withdraw:" + Amount);
+        System.out.println("Update Balance: " + this.Balance);
+    }
+}
+
+
+
