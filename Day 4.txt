@@ -1,0 +1,242 @@
+DAY 4 
+
+
+POLYMORPHISM:
+https://www.geeksforgeeks.org/polymorphism-in-java/
+  Polymorphism in java refers to the ability of a single action to behave differently based on the context.
+  It enables objects of different classes to be treated as objects of a common superclass, primarily achieved through method overriding(runtime polymorphism) and method overloading(compile-time-polymorphism).
+
+Types of polymorphism:
+  1)Compile-time Polymorphism(static):
+    Achieved through method overloading.
+	Resolved during compilation.
+  2)Runtime Polymorphism(Dynamic):  
+    Achieved through method overriding.
+	Resolved at runtime based on the actual object type.
+	
+	
+	
+	
+	
+Method overloading: Compile time polymorphism
+
+	package com.constructor;
+
+class Shoppingitems{
+	void additems(String item_name,int price) {
+		System.out.println(" Item name is: "+item_name+"fixed price: "+price);
+	}
+	void additems(String item_name,int price,int item_quantity) {
+		int totalprice=price*item_quantity;
+		System.out.println(" Item name is: "+item_name+"Quantity: "+item_quantity+"Total: "+totalprice);
+	}
+    void additems(String item_name,int price,int item_quantity,int discount) {
+    	int totalPrice = price * item_quantity; 
+        double discountAmount = (discount / 100.0) * totalPrice;  
+        double finalPrice = totalPrice - discountAmount;  
+        
+        System.out.println(" Item name is: " + item_name + 
+                           " Quantity: " + item_quantity + 
+                           " Total (Before Discount): " + totalPrice + 
+                           " Discount: " + discount + "%" + 
+                           " Final price after discount: " + finalPrice);
+	}
+}
+
+public class Shoppingcart {
+	public static void main(String[] args) {
+		Shoppingitems ref = new Shoppingitems();
+		ref.additems("Monitor", 20000);
+		ref.additems("Keyboard",1000,2);
+		ref.additems("Mouse",100,2,50);
+		
+	}
+
+}
+
+
+
+Method overriding: Run time polymorphism 
+  
+  package com.constructor;
+
+class Topayvia{
+	void pay(int amount) {
+		System.out.println("In hand amount: "+amount);
+	}
+}
+
+class CreditUpi extends Topayvia{
+	void pay(int amount) {
+		System.out.println("Upipayment "+amount);
+	}
+	
+}
+
+class Gpay extends Topayvia{
+	void pay(int amount) {
+		System.out.println("Gpay "+amount);
+	}
+}
+
+public class Paymentprocessing {
+	public static void main(String[] args) {
+		Topayvia ref;
+        ref = new CreditUpi();
+        ref.pay(2000);
+        
+        ref = new Gpay();
+        ref.pay(3000);
+	}
+}	
+
+
+
+
+
+
+Syntax:
+
+interface interfacename{
+		//variable
+		static int a=10;
+		final int b=10;
+		//method
+		default void methodname(){
+		
+		}
+		abstract void methodname(){
+		
+		}
+}
+
+
+
+
+
+
+
+  
+  
+  
+  
+Abstraction:
+
+  Abstraction is the process of hiding implementation details and showing only the essential features of an object.
+  
+  Key features of abstraction:
+    Implemented using abstract classes and interfaces in Java.
+	Helps focus on "What an object does" rather than "How it does it".
+	Abstract method does not have body.
+	
+	
+	
+
+abstract class Animal {
+	//Abstract method(no implementation)
+	abstract void sound();
+	
+	//Regular method
+	void sleep() {
+		System.out.println("Sleeping");
+	}
+}
+
+
+
+If you know the implementation partially, use an abstract class.
+If you don't know the implementation, use and interface.
+
+
+
+
+Interface:
+  Only public static final (constants) variables are allowed.
+  All interface methods are public & abstract by default.
+  
+  When to use an Interface?
+    When multiple classes need a common behaviour.
+	When you want to achieve full abstraction.
+	When you want to decouple dependencies between components.
+	
+
+
+
+
+	
+	package com.constructor;
+
+public class Empsalary {
+	
+	
+	public double Calculatesalary(double fixedsalary) {
+		return fixedsalary;
+	}
+	
+	public double Calculatesalary(int hoursworked,double hourlyrate) {
+		return hoursworked * hourlyrate;
+	}
+	
+	public double Calculatesalary(int hoursworked, double hourlyrate, double bonus) {
+		return(hoursworked * hourlyrate) + bonus;
+	}
+	
+	public static void main(String[] args) {
+		Empsalary salarycalculator = new Empsalary();
+		
+		double fulltimesalary = salarycalculator.Calculatesalary(2000.00);
+		System.out.println("Full-time employee salary: $"+fulltimesalary);
+		
+		double parttimesalary = salarycalculator.Calculatesalary(30, 10.05);
+		System.out.println("Part-time employee salary: $"+parttimesalary);
+		
+		double freelancersalary = salarycalculator.Calculatesalary(20,15.07,100.00);
+		System.out.println("Freelancer salary: $"+freelancersalary);
+	}
+}
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+EXCEPTION HANDLING
+
+Exception handling is a mechanism to handle runtime errors in Java, ensuring the program can recover or provide meaningful error messages.
+It uses try, catch, throw, and finally keywords to manage exceptions.
+
+Key concepts:
+
+Exception Classes:
+  Exception: Checked exceptions that must be declared or handled explicitly(e.g.,IOException: Unchecked exception(e.g., NullPointerException).
+  Runtime Exception: Unchecked exceptions(e.g., NullPointerException).
+  
+  
+Keywords:
+  try:Block of code where exceptions might occur.
+  catch:Block to handle exceptions.
+  throw:Explicitly throws and exception.
+  throws:Declares exceptions that a method might throw.
+  finally:Block that executes regardless of whether an exception occurred or not.
+  
+  package com.constructor;
+
+public class Main1 {
+	public static void main(String[] args) {
+		try {
+			int num=10/0;
+		}catch(ArithmeticException e) {
+			System.out.println("Cannot divide by zero:"+e.getMessage());
+	}finally {
+		System.out.println("Execution completed");
+	}
+}
+}
+  
+
+	
