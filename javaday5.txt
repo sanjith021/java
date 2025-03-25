@@ -1,0 +1,23 @@
+class IdontLikeThename extends Exception{
+     public IdontLikeThename(String message)
+    { 
+        super(message);
+    }
+ }
+public class Main {
+public static void main(String[] agrs)
+    Scanner in =new Scanner(System.in);
+    try{
+           String str=in.nextline();
+           if(str.equal("Hello'))
+        {
+              throw.new  IdontlikeThename("change name");
+         }
+      }
+            catch (Exception e)
+        {
+           System.out.println(e);
+        }
+    }
+}
+
