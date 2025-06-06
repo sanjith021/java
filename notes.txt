@@ -1,0 +1,169 @@
+_______________________________________DAY  1___________________________________________________
+
+1.using if else else if for age 
+
+class Main {	
+    public static void main(String[] args) {
+        int age = 16;
+        if(age>16)
+        {
+            System.out.println("Vaild");
+        }
+        else  if(age==16)
+        {
+            System.out.println("16");
+        }
+        else
+        {
+            System.out.println("Invaild");
+        }
+    }
+}
+
+OUTPUT
+ age is 16
+
+
+_________________________________________________________________________________________
+2.using if else else if for m/f
+
+class Main {
+    public static void main(String[] args) {
+        int age = 36;
+       String gender = "male";
+        if(age>21 && gender=="female")
+        {
+            System.out.println("Eligible for female");
+        }
+        else if(age>23 && gender=="male")
+        {
+            System.out.println("Eligible for male");
+       }
+        else
+        {
+            System.out.println("Not Eligible");
+        }
+    }
+}
+
+OUTPUT
+Eligible for male
+
+
+_______________________________________________________________________________________
+3.using if esle for bus ticket
+
+class Main {
+       
+    public static void main(String[] args) {
+           String gender = "female";
+       int age = 16;
+       if (age > 19|| gender=="female")
+       {
+            System.out.println("ticket is free");
+       }
+       else{
+            System.out.println("it is not free");
+       }
+    }
+}
+
+OUTPUT
+ticket is free
+
+_________________________________________________________________________________________
+4. switch and if else
+
+class Main {
+       
+    public static void main(String[] args) {
+           String gender = "male";
+       int age = 16;
+       if (age > 19|| gender=="male")
+       {
+            System.out.println("ticket is free");
+       }
+       else{
+           int km =20;
+           switch(km){
+               case 1:{
+                    System.out.println("Rupees 50");
+                    break;}
+               }
+           case 2:{
+               System.out.println("Rupees 100");
+                    break;}
+           }
+           default:{
+               System.out.println("not applicable");
+                    break;}
+           }
+       }
+       }
+       }
+      
+ OUTPUT
+not applicable   
+ 
+
+_________________________________________________________________________________________
+5. for loop
+
+
+class Main {
+    public static void main(String[] args) {
+        for(int i=0;i<5;)
+        {
+            i+=2;
+            System.out.println(i);
+        }
+    }
+}
+
+OUTPUT
+2
+4
+6
+
+_______________________________________________________________________________________
+6. do while
+
+
+class Main {
+    public static void main(String[] args) {
+    int i=5;
+    do
+    {
+        System.out.println(i);
+        i++;
+    }while(i<5);
+    }
+}
+
+OUTPUT 
+5
+
+_________________________________________________________________________________________
+7. methods
+
+
+
+public class Main{
+    int myMethod(int a,int b)
+
+    {
+        return a+b;
+    }
+      public static void main(String[] args) { 
+           Main mi = new Main();
+          System.out.println(mi.myMethod(10,7));
+      }
+}
+
+OUTPUT
+17
+
+_________________________________________________________________________________________
+8.
+  
+
